@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Pantalla principal (selección de dificultad, botón nuevo objeto y disclaimer) -->
+  <!-- Pantalla principal (menú) -->
   <div id="mainContainer" class="container">
     <h1>¿Quién soy?</h1>
     
@@ -24,6 +24,7 @@
     </div>
     
     <button id="newObjectBtn">Nuevo Objeto</button>
+    <button id="instructionsBtn">Instrucciones</button>
     
     <div id="message" class="message"></div>
     
@@ -33,7 +34,7 @@
     </p>
   </div>
   
-  <!-- Pantalla de palabra en modo "pantalla completa" -->
+  <!-- Pantalla de la palabra en modo "pantalla completa" -->
   <div id="wordScreen" class="word-screen">
     <div id="wordDisplay" class="word-display"></div>
     <div id="wordTimer" class="word-timer"></div>
@@ -50,6 +51,59 @@
     </audio>
   </div>
 
+  <!-- Pantalla de instrucciones -->
+  <div id="instructionsScreen" class="instructions-screen">
+    <h2>Instrucciones de juego</h2>
+    <ol>
+      <li>
+        <strong>Selección de dificultad:</strong>
+        <ul>
+          <li>Elige una de las tres opciones de dificultad: <em>Fácil</em>, <em>Normal</em> o <em>Difícil</em>.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Nuevo objeto:</strong>
+        <ul>
+          <li>Pulsa el botón <strong>"Nuevo Objeto"</strong>. Aparecerá una cuenta regresiva de 5 segundos antes de que se muestre la palabra.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Posición del teléfono:</strong>
+        <ul>
+          <li>Cuando la cuenta llegue a cero, coloca el teléfono sobre tu cabeza sin mirar la pantalla para no ver la palabra. El resto de los jugadores sí podrá verla.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Realiza preguntas:</strong>
+        <ul>
+          <li>Dispones de <strong>2 minutos</strong> para adivinar qué palabra te ha tocado.</li>
+          <li>Puedes hacer preguntas de tipo “sí” o “no” a los demás jugadores. Por ejemplo:
+            <ul>
+              <li>"¿Soy un objeto?"</li>
+              <li>"¿Soy un animal?"</li>
+              <li>"¿Soy una fruta?"</li>
+            </ul>
+          </li>
+          <li>Los demás jugadores <strong>solo pueden responder con “sí” o “no”</strong>.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Final del turno:</strong>
+        <ul>
+          <li>Si adivinas la palabra antes de que acabe el tiempo, presiona el botón <strong>"Salir"</strong> para regresar a la pantalla principal y empezar una nueva ronda.</li>
+          <li>Si no aciertas en los 2 minutos, el temporizador se detendrá automáticamente y se reproducirá un sonido de final de tiempo. Luego de 3 segundos, volverás a la pantalla principal.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Ganador:</strong>
+        <ul>
+          <li>El jugador que <strong>más veces adivine</strong> correctamente en sus turnos, será quien gane el juego.</li>
+        </ul>
+      </li>
+    </ol>
+    <button id="backToMenuBtn">Volver al Menú</button>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>

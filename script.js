@@ -5,16 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const newObjectBtn = document.getElementById('newObjectBtn');
   const difficultySelect = document.getElementById('difficulty');
   const messageDiv = document.getElementById('message');
-  
+
   // Pantalla de la palabra
   const wordScreen = document.getElementById('wordScreen');
   const wordDisplay = document.getElementById('wordDisplay');
   const wordTimer = document.getElementById('wordTimer');
   const exitButton = document.getElementById('exitButton');
-  
+
+  // Pantalla de instrucciones
+  const instructionsScreen = document.getElementById('instructionsScreen');
+  const instructionsBtn = document.getElementById('instructionsBtn');
+  const backToMenuBtn = document.getElementById('backToMenuBtn');
+
   let countdownInterval;    // Temporizador para el cronómetro de la palabra
   let preCountdownInterval; // Temporizador para la cuenta regresiva de 5 segundos
-  
+
   // Botón para generar un nuevo objeto
   newObjectBtn.addEventListener('click', () => {
     const difficulty = difficultySelect.value;
@@ -52,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Muestra la pantalla con la palabra, el timer y reproduce el sonido del timer
   function showWordScreen(word) {
     mainContainer.style.display = 'none';
+    instructionsScreen.style.display = 'none';
     messageDiv.textContent = '';
     wordScreen.style.display = 'flex';
     wordDisplay.textContent = word;
@@ -109,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     timerAudio.pause();
     timerAudio.currentTime = 0;
     
-    // Si se sale manualmente (no por timeout), detenemos también el audio de timeout.
     if (!isTimeout) {
       const timeoutAudio = document.getElementById('timeoutAudio');
       timeoutAudio.pause();
@@ -126,4 +131,17 @@ document.addEventListener('DOMContentLoaded', () => {
     wordTimer.textContent = '';
     newObjectBtn.disabled = false;
   }
+  
+  // Mostrar instrucciones: oculta el menú principal y muestra la pantalla de instrucciones
+  instructionsBtn.addEventListener('click', () => {
+    mainContainer.style.display = 'none';
+    wordScreen.style.display = 'none';
+    instructionsScreen.style.display = 'block';
+  });
+  
+  // Volver al menú: oculta la pantalla de instrucciones y muestra el menú principal
+  backToMenuBtn.addEventListener('click', () => {
+    instructionsScreen.style.display = 'none';
+    mainContainer.style.display = 'block';
+  });
 });
