@@ -1,0 +1,144 @@
+/* style.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Select de dificultad */
+  .difficulty {
+    margin-bottom: 20px;
+  }
+  
+  select {
+    padding: 8px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  /* Botón general */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mensaje informativo */
+  .message {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+    min-height: 24px;
+  }
+  
+  /* ========== PANTALLA DE LA PALABRA (FULLSCREEN) ========== */
+  .word-screen {
+    display: none;             /* Oculto por defecto */
+    position: fixed;           /* Posición absoluta sobre toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    flex-direction: column;    /* Para apilar texto, timer y botón */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 999;              /* Encima de todo */
+    padding: 20px;
+  }
+  
+  /* Palabra en gran tamaño, ocupando ~90% de la pantalla en ancho */
+  .word-display {
+    font-size: 12vw;           /* Ajusta el tamaño según el ancho de la ventana */
+    width: 90%;                /* Limita el ancho máximo de la palabra */
+    margin: 20px auto;
+    word-wrap: break-word;     /* Por si la palabra es muy larga */
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Temporizador también en gran tamaño */
+  .word-timer {
+    font-size: 8vw;
+    color: #d9534f;
+    margin: 20px 0;
+  }
+  
+  /* Botón "Salir" para volver a la pantalla principal */
+  .exit-button {
+    background-color: #dc3545;
+    font-size: 18px;
+    border-radius: 4px;
+  }
+  
+  .exit-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsivo para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .container {
+      margin: 20px;
+      padding: 15px;
+    }
+    
+    h1 {
+      font-size: 24px;
+    }
+    
+    button, select {
+      font-size: 14px;
+    }
+    
+    .message {
+      font-size: 16px;
+    }
+    
+    .word-display {
+      font-size: 14vw; /* Aumentamos aún más en móvil para mejor visibilidad */
+    }
+    
+    .word-timer {
+      font-size: 10vw; /* Timer también grande en móvil */
+    }
+    
+    .exit-button {
+      font-size: 16px;
+    }
+  }
+  
