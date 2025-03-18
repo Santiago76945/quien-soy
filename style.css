@@ -65,10 +65,17 @@
     min-height: 24px;
   }
   
+  /* Disclaimer */
+  .disclaimer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+  }
+  
   /* ========== PANTALLA DE LA PALABRA (FULLSCREEN) ========== */
   .word-screen {
     display: none;             /* Oculto por defecto */
-    position: fixed;           /* Posición absoluta sobre toda la pantalla */
+    position: fixed;           /* Fijo sobre toda la pantalla */
     top: 0;
     left: 0;
     width: 100%;
@@ -104,6 +111,7 @@
     background-color: #dc3545;
     font-size: 18px;
     border-radius: 4px;
+    padding: 10px 20px;
   }
   
   .exit-button:hover {
@@ -130,7 +138,7 @@
     }
     
     .word-display {
-      font-size: 14vw; /* Aumentamos aún más en móvil para mejor visibilidad */
+      font-size: 14vw; /* Aumentamos en móvil para mejor visibilidad */
     }
     
     .word-timer {
@@ -139,6 +147,10 @@
     
     .exit-button {
       font-size: 16px;
+    }
+    
+    .disclaimer {
+      font-size: 12px;
     }
   }
   
