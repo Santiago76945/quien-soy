@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Pantalla principal (selección de dificultad, botón nuevo objeto) -->
+  <!-- Pantalla principal (selección de dificultad, botón nuevo objeto y disclaimer) -->
   <div id="mainContainer" class="container">
     <h1>¿Quién soy?</h1>
     
@@ -38,6 +38,16 @@
     <div id="wordDisplay" class="word-display"></div>
     <div id="wordTimer" class="word-timer"></div>
     <button id="exitButton" class="exit-button">Salir</button>
+    <!-- Audio para el timer en bucle -->
+    <audio id="timerAudio" loop>
+      <source src="timer.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+    <!-- Audio para el sonido de timeout -->
+    <audio id="timeoutAudio">
+      <source src="timeout.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
   </div>
 
   <script src="script.js"></script>
