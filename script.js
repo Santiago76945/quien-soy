@@ -1,6 +1,17 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Reproducir sonido al hacer clic en cada botón
+  const buttonClickAudio = document.getElementById('buttonClickAudio');
+  document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+      if (buttonClickAudio) {
+        buttonClickAudio.currentTime = 0;
+        buttonClickAudio.play();
+      }
+    });
+  });
+
   const mainContainer = document.getElementById('mainContainer');
   const newObjectBtn = document.getElementById('newObjectBtn');
   const difficultySelect = document.getElementById('difficulty');
