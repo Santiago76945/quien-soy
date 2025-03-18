@@ -2,17 +2,19 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>¿Quién soy? - Juego</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Pantalla principal (menú) -->
   <div id="mainContainer" class="container">
-    <h1>¿Quién soy?</h1>
-    
+    <img src="logo.png" alt="Logo del juego" class="logo">
+
     <div class="difficulty">
       <label for="difficulty">Elige la dificultad:</label>
       <select id="difficulty">
@@ -22,18 +24,18 @@
         <option value="dificil">Difícil</option>
       </select>
     </div>
-    
+
     <button id="newObjectBtn">Nuevo Objeto</button>
     <button id="instructionsBtn">Instrucciones</button>
-    
+
     <div id="message" class="message"></div>
-    
+
     <!-- Disclaimer -->
     <p class="disclaimer">
-      Este software ha sido desarrollado por Santiago Haspert Piaggio (2025). Todos los derechos reservados.
+      Este software es propiedad de Thiago King Games. Thiago King es una marca propiead de Santiago Haspert Piaggio (2025). Todos los derechos reservados. Queda prohibida la reproducción, distribución, modificación o cualquier otro uso de este software sin la autorización expresa del titular. Cualquier uso no autorizado podrá ser sujeto a las acciones legales correspondientes.
     </p>
   </div>
-  
+
   <!-- Pantalla de la palabra en modo "pantalla completa" -->
   <div id="wordScreen" class="word-screen">
     <div id="wordDisplay" class="word-display"></div>
@@ -64,13 +66,15 @@
       <li>
         <strong>Nuevo objeto:</strong>
         <ul>
-          <li>Pulsa el botón <strong>"Nuevo Objeto"</strong>. Aparecerá una cuenta regresiva de 5 segundos antes de que se muestre la palabra.</li>
+          <li>Pulsa el botón <strong>"Nuevo Objeto"</strong>. Aparecerá una cuenta regresiva de 5 segundos antes de que
+            se muestre la palabra.</li>
         </ul>
       </li>
       <li>
         <strong>Posición del teléfono:</strong>
         <ul>
-          <li>Cuando la cuenta llegue a cero, coloca el teléfono sobre tu cabeza sin mirar la pantalla para no ver la palabra. El resto de los jugadores sí podrá verla.</li>
+          <li>Cuando la cuenta llegue a cero, coloca el teléfono sobre tu cabeza sin mirar la pantalla para no ver la
+            palabra. El resto de los jugadores sí podrá verla.</li>
         </ul>
       </li>
       <li>
@@ -90,20 +94,24 @@
       <li>
         <strong>Final del turno:</strong>
         <ul>
-          <li>Si adivinas la palabra antes de que acabe el tiempo, presiona el botón <strong>"Salir"</strong> para regresar a la pantalla principal y empezar una nueva ronda.</li>
-          <li>Si no aciertas en los 2 minutos, el temporizador se detendrá automáticamente y se reproducirá un sonido de final de tiempo. Luego de 3 segundos, volverás a la pantalla principal.</li>
+          <li>Si adivinas la palabra antes de que acabe el tiempo, presiona el botón <strong>"Salir"</strong> para
+            regresar a la pantalla principal y empezar una nueva ronda.</li>
+          <li>Si no aciertas en los 2 minutos, el temporizador se detendrá automáticamente y se reproducirá un sonido de
+            final de tiempo. Luego de 3 segundos, volverás a la pantalla principal.</li>
         </ul>
       </li>
       <li>
         <strong>Ganador:</strong>
         <ul>
-          <li>El jugador que <strong>más veces adivine</strong> correctamente en sus turnos, será quien gane el juego.</li>
+          <li>El jugador que <strong>más veces adivine</strong> correctamente en sus turnos, será quien gane el juego.
+          </li>
         </ul>
       </li>
     </ol>
     <button id="backToMenuBtn">Volver al Menú</button>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
+
 </html>

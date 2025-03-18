@@ -182,3 +182,12 @@ button:hover {
 .instructions-screen button:hover {
   background-color: #0056b3;
 }
+
+/* ========== Estilo para el Logo en el Menú Principal ========== */
+.logo {
+  display: block;
+  margin: 20px auto;
+  width: 60%;       
+  height: auto;
+}
+
