@@ -6,41 +6,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>¿Quién soy? - Juego</title>
+  <title data-i18n="title">¿Quién soy? - Juego</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body id="body">
   <!-- Pantalla principal (menú) -->
   <div id="mainContainer" class="container">
-    <img src="logo.png" alt="Logo del juego" class="logo">
+    <!-- Actualizamos el src para que cargue el logo por defecto (por ejemplo, inglés) -->
+    <img src="logos/logo_en.png" alt="Logo del juego" class="logo">
+
+    <!-- Se eliminó el selector de idioma de la parte superior -->
 
     <div class="difficulty">
-      <label for="difficulty">Elige la dificultad:</label>
+      <label for="difficulty" data-i18n="choose_difficulty">Elige la dificultad:</label>
       <select id="difficulty">
-        <option value="" selected disabled>Selecciona...</option>
-        <option value="facil">Fácil</option>
-        <option value="normal">Normal</option>
-        <option value="dificil">Difícil</option>
+        <option value="" selected disabled data-i18n="select_option">Selecciona...</option>
+        <option value="facil" data-i18n="difficulty_easy">Fácil</option>
+        <option value="normal" data-i18n="difficulty_normal">Normal</option>
+        <option value="dificil" data-i18n="difficulty_difficult">Difícil</option>
       </select>
     </div>
 
     <!-- Contenedor para agrupar los botones -->
     <div class="buttons-group">
-      <button id="newObjectBtn" class="action-btn">Comenzar!</button>
-      <button id="instructionsBtn" class="action-btn">Instrucciones</button>
+      <button id="newObjectBtn" class="action-btn" data-i18n="start_button">¡Comenzar!</button>
+      <button id="instructionsBtn" class="action-btn" data-i18n="instructions_button">Instrucciones</button>
+      <!-- Nuevo contenedor para el dropdown de idioma -->
+      <div class="dropdown-language">
+        <button id="chooseLanguageBtn" class="action-btn" data-i18n="choose_language">Elegir idioma</button>
+        <div id="languageSwitcher" class="language-switcher">
+          <button class="lang-btn" data-lang="es">Español</button>
+          <button class="lang-btn" data-lang="en">English</button>
+          <button class="lang-btn" data-lang="de">Deutsch</button>
+        </div>
+      </div>
     </div>
 
     <div id="message" class="message"></div>
 
-    <!-- Logo pequeño de TK Games agregado antes del disclaimer -->
-    <!-- <img src="tk-logo.png" alt="Logo TK Games" class="tk-logo"> -->
+    <!-- Audio para el theme song en bucle -->
+    <audio id="themeSongAudio" loop>
+      <source src="themeSongAudio.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
 
     <!-- Disclaimer -->
-    <p class="disclaimer">
-      Este software es propiedad de Thiago King Games. Thiago King es una marca propiead de Santiago Haspert Piaggio (2025).
-      Todos los derechos reservados. Queda prohibida la reproducción, distribución, modificación o cualquier otro uso de este
-      software sin la autorización expresa del titular. Cualquier uso no autorizado podrá ser sujeto a las acciones legales
+    <p class="disclaimer" data-i18n="disclaimer">
+      Este software es propiedad de Thiago King Games. Thiago King es una marca propiead de Santiago Haspert Piaggio
+      (2025).
+      Todos los derechos reservados. Queda prohibida la reproducción, distribución, modificación o cualquier otro uso de
+      este
+      software sin la autorización expresa del titular. Cualquier uso no autorizado podrá ser sujeto a las acciones
+      legales
       correspondientes.
     </p>
   </div>
@@ -49,7 +67,7 @@
   <div id="wordScreen" class="word-screen">
     <div id="wordDisplay" class="word-display"></div>
     <div id="wordTimer" class="word-timer"></div>
-    <button id="exitButton" class="exit-button">Salir</button>
+    <button id="exitButton" class="exit-button" data-i18n="exit_button">Salir</button>
     <!-- Audio para el timer en bucle -->
     <audio id="timerAudio" loop>
       <source src="timer.mp3" type="audio/mpeg">
@@ -66,57 +84,8 @@
   <div id="instructionsScreen" class="instructions-screen">
     <!-- Contenedor interno con fondo blanco -->
     <div class="instructions-content">
-      <h2>Instrucciones de juego</h2>
-      <!-- Nueva imagen de ilustración -->
-      <img src="people-playing.png" alt="Ilustración de gente jugando" class="instructions-img">
-      <ol>
-        <li>
-          <strong>Selección de dificultad:</strong>
-          <ul>
-            <li>Elige una de las tres opciones de dificultad: <em>Fácil</em>, <em>Normal</em> o <em>Difícil</em>.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Nuevo objeto:</strong>
-          <ul>
-            <li>Pulsa el botón <strong>"Nuevo Objeto"</strong>. Aparecerá una cuenta regresiva de 5 segundos antes de que se muestre la palabra.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Posición del teléfono:</strong>
-          <ul>
-            <li>Cuando la cuenta llegue a cero, coloca el teléfono sobre tu cabeza sin mirar la pantalla para no ver la palabra. El resto de los jugadores sí podrá verla.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Realiza preguntas:</strong>
-          <ul>
-            <li>Dispones de <strong>2 minutos</strong> para adivinar qué palabra te ha tocado.</li>
-            <li>Puedes hacer preguntas de tipo “sí” o “no” a los demás jugadores. Por ejemplo:
-              <ul>
-                <li>"¿Soy un objeto?"</li>
-                <li>"¿Soy un animal?"</li>
-                <li>"¿Soy una fruta?"</li>
-              </ul>
-            </li>
-            <li>Los demás jugadores <strong>solo pueden responder con “sí” o “no”</strong>.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Final del turno:</strong>
-          <ul>
-            <li>Si adivinas la palabra antes de que acabe el tiempo, presiona el botón <strong>"Salir"</strong> para regresar a la pantalla principal y empezar una nueva ronda.</li>
-            <li>Si no aciertas en los 2 minutos, el temporizador se detendrá automáticamente y se reproducirá un sonido de final de tiempo. Luego de 3 segundos, volverás a la pantalla principal.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Ganador:</strong>
-          <ul>
-            <li>El jugador que <strong>más veces adivine</strong> correctamente en sus turnos, será quien gane el juego.</li>
-          </ul>
-        </li>
-      </ol>
-      <button id="backToMenuBtn" class="action-btn">Volver al Menú</button>
+      <!-- Contenedor que se rellenará dinámicamente con las traducciones de instrucciones -->
+      <div id="instructionsContainer"></div>
     </div>
   </div>
 

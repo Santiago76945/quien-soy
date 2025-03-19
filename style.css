@@ -298,7 +298,7 @@ select:hover {
 }
 
 /* Imagen de ilustración en instrucciones */
-.instructions-img {
+.instructions-image {
   width: 100%;
   max-width: 500px;      /* Limita el ancho máximo */
   display: block;        /* Para centrarla */
@@ -313,4 +313,53 @@ select:hover {
   display: block;                  /* Para centrarla */
   margin: 5px auto 20px auto;       /* Margen superior de 5px y margen inferior de 20px */
   border-radius: 4px;              /* Bordes ligeramente redondeados */
+}
+
+/* Estilo para el contenedor de subbotones de idioma */
+.language-switcher {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  margin-top: 5px;
+}
+
+/* Cuando se activa, se expande el dropdown */
+.language-switcher.active {
+  max-height: 150px; /* Altura suficiente para los botones */
+  opacity: 1;
+}
+
+/* Estilo para los botones de idioma dentro del dropdown */
+.language-switcher .lang-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  background-color: #FF9800;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin: 2px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-switcher .lang-btn:hover {
+  background-color: #FFD700;
+}
+
+/* Ajuste del contenedor del dropdown para que sea congruente con los demás botones */
+.dropdown-language {
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+/* Asegurar que el botón "Elegir idioma" ocupe el 100% del contenedor y esté centrado */
+.dropdown-language .action-btn {
+  width: 100%;
+  text-align: center;
+  margin: 0; /* Se elimina el margen para alinear correctamente */
 }

@@ -1,0 +1,51 @@
+{
+    "es": {
+      "title": "¿Quién soy? - Juego",
+      "choose_difficulty": "Elige la dificultad:",
+      "select_option": "Selecciona...",
+      "difficulty_easy": "Fácil",
+      "difficulty_normal": "Normal",
+      "difficulty_difficult": "Difícil",
+      "start_button": "¡Comenzar!",
+      "instructions_button": "Instrucciones",
+      "word_announcement": "Por el teléfono en tu cabeza la palabra aparecerá en {seconds} segundos!",
+      "back_to_menu": "Volver al Menú",
+      "instructions_title": "Instrucciones de juego",
+      "instructions_img_alt": "Ilustración de gente jugando",
+      "disclaimer": "Este software es propiedad de Thiago King Games. Thiago King es una marca propiead de Santiago Haspert Piaggio (2025). Todos los derechos reservados. Queda prohibida la reproducción, distribución, modificación o cualquier otro uso de este software sin la autorización expresa del titular. Cualquier uso no autorizado podrá ser sujeto a las acciones legales correspondientes.",
+      "exit_button": "Salir"
+    },
+    "en": {
+      "title": "Who am I? - Game",
+      "choose_difficulty": "Choose the difficulty:",
+      "select_option": "Select...",
+      "difficulty_easy": "Easy",
+      "difficulty_normal": "Normal",
+      "difficulty_difficult": "Hard",
+      "start_button": "Start!",
+      "instructions_button": "Instructions",
+      "word_announcement": "On your head, the word will appear in {seconds} seconds!",
+      "back_to_menu": "Back to Menu",
+      "instructions_title": "Game Instructions",
+      "instructions_img_alt": "Illustration of people playing",
+      "disclaimer": "This software is property of Thiago King Games. Thiago King is a trademark of Santiago Haspert Piaggio (2025). All rights reserved. Reproduction, distribution, modification, or any other use of this software without the express authorization of the owner is prohibited. Any unauthorized use may be subject to legal actions.",
+      "exit_button": "Exit"
+    },
+    "de": {
+      "title": "Wer bin ich? - Spiel",
+      "choose_difficulty": "Wähle den Schwierigkeitsgrad:",
+      "select_option": "Auswählen...",
+      "difficulty_easy": "Einfach",
+      "difficulty_normal": "Normal",
+      "difficulty_difficult": "Schwierig",
+      "start_button": "Starten!",
+      "instructions_button": "Anweisungen",
+      "word_announcement": "Das Wort erscheint in {seconds} Sekunden auf deinem Kopf!",
+      "back_to_menu": "Zum Menü zurück",
+      "instructions_title": "Spielanleitung",
+      "instructions_img_alt": "Illustration von Menschen beim Spielen",
+      "disclaimer": "Diese Software ist Eigentum von Thiago King Games. Thiago King ist eine Marke von Santiago Haspert Piaggio (2025). Alle Rechte vorbehalten. Die Vervielfältigung, Verbreitung, Modifizierung oder jede andere Nutzung dieser Software ohne ausdrückliche Genehmigung des Eigentümers ist untersagt. Jede unautorisierte Nutzung kann rechtliche Konsequenzen nach sich ziehen.",
+      "exit_button": "Beenden"
+    }
+  }
+  
