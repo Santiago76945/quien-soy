@@ -12,7 +12,7 @@
         "back_to_menu": "Volver al Menú",
         "instructions_title": "Instrucciones de juego",
         "instructions_img_alt": "Ilustración de gente jugando",
-        "disclaimer": "Este software es propiedad de Thiago King Games. Thiago King es una marca propiead de Santiago Haspert Piaggio (2025). Todos los derechos reservados...",
+        "disclaimer": "Este software es propiedad de Thiago King Games. Thiago King es una marca propiead de Santiago Haspert Piaggio (2025). Todos los derechos reservados. Queda prohibida la reproducción, distribución, modificación o cualquier otro uso de este software sin la autorización expresa del titular. Cualquier uso no autorizado podrá ser sujeto a las acciones legales correspondientes.",
         "exit_button": "Salir",
         "choose_language": "Elegir idioma"
     },
@@ -29,7 +29,7 @@
         "back_to_menu": "Back to Menu",
         "instructions_title": "Game Instructions",
         "instructions_img_alt": "Illustration of people playing",
-        "disclaimer": "This software is property of Thiago King Games. Thiago King is a trademark of Santiago Haspert Piaggio (2025). All rights reserved...",
+        "disclaimer": "This software is the property of Thiago King Games. 'Thiago King' is a trademark owned by Santiago Haspert Piaggio (2025). All rights reserved. Reproduction, distribution, modification, or any other use of this software without the express authorization of the owner is strictly prohibited. Any unauthorized use may be subject to appropriate legal actions.",
         "exit_button": "Exit",
         "choose_language": "Choose language"
     },
@@ -46,7 +46,7 @@
         "back_to_menu": "Zum Menü zurück",
         "instructions_title": "Spielanleitung",
         "instructions_img_alt": "Illustration von Menschen beim Spielen",
-        "disclaimer": "Diese Software ist Eigentum von Thiago King Games. Thiago King ist eine Marke von Santiago Haspert Piaggio (2025). Alle Rechte vorbehalten...",
+        "disclaimer": "Diese Software ist Eigentum von Thiago King Games. 'Thiago King' ist eine Marke von Santiago Haspert Piaggio (2025). Alle Rechte vorbehalten. Die Vervielfältigung, Verbreitung, Änderung oder jegliche andere Verwendung dieser Software ohne ausdrückliche Genehmigung des Rechteinhabers ist strengstens untersagt. Jede unautorisierte Nutzung kann rechtliche Schritte nach sich ziehen.",
         "exit_button": "Beenden",
         "choose_language": "Sprache wählen"
     }
